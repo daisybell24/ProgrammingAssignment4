@@ -5,5 +5,3 @@ This repository contains an R script (run_analysis.R) to create a tidy data set 
 This script should be run from a folder containing the UCI HAR Dataset folder.
 
 Codebook.md describes the variables and the process by which the final tidy dataset was made.
-
-
