@@ -1,21 +1,12 @@
 # Codebook
 
-The dataset "averagesActSubj.csv" was created by column-binding the data,  
-labels and subjects from both the "test" and "train"  folders within   
-the "UCI HAR Dataset" into test and train data-frames. The resulting   
-data-frames were then row-bound into one large data-frame. 
+The dataset "averagesActSubj.csv" was created by column-binding the data, labels and subjects from both the "test" and "train"  folders within the "UCI HAR Dataset" into test and train data-frames. The resulting data-frames were then row-bound into one large data-frame. 
 
-Each row comprised 561 columns corresponding to the features in  
-"UCI HAR Dataset/features.txt", a column named "activity" containing  
-the activity label (1-6) and a column named "subject" containing the  
-subject label (1-30).
+Each row comprised 561 columns corresponding to the features in "UCI HAR Dataset/features.txt", a column named "activity" containing the activity label (1-6) and a column named "subject" containing the subject label (1-30).
 
-Columns were selected from this data-frame based on whether they  
-contained  "mean" or "std" in the variable name. The "activity" and  
-"subject" label columns for each row were kept.
+Columns were selected from this data-frame based on whether they contained  "mean" or "std" in the variable name. The "activity" and "subject" label columns for each row were kept.
 
-Each entry in the activity column was renamed from the numbers 1-6  
-to their corresponding label given in  "UCI HAR Dataset/activity_labels.txt":
+Each entry in the activity column was renamed from the numbers 1-6 to their corresponding label given in  "UCI HAR Dataset/activity_labels.txt":
 
 1 WALKING  
 2 WALKING_UPSTAIRS  
@@ -24,17 +15,11 @@ to their corresponding label given in  "UCI HAR Dataset/activity_labels.txt":
 5 STANDING  
 6 LAYING  
 
-The variable names were then tidied up by removing the characters  
-"()" and "-".
+The variable names were then tidied up by removing the characters "()" and "-".
 
-The data-frame was then subset by each factor in the "subject" variable,  
-and within each of these factors, subset again by each factor in the  
-"activity" variable. The mean of each variable was then taken and appended  
-into a final data-frame ("averagesActSubj.csv"). This data-frame therefore  
-contains the average of each variable over each activity for each subject.
+The data-frame was then subset by each factor in the "subject" variable, and within each of these factors, subset again by each factor in the "activity" variable. The mean of each variable was then taken and appended into a final data-frame ("averagesActSubj.csv"). This data-frame therefore contains the average of each variable over each activity for each subject.
 
-The dataset contains 180 rows and 81 columns, for which the variable names  
-are as follows:
+The dataset contains 180 rows and 81 columns, for which the variable names are as follows:
 
 1 tBodyAccmeanX  
 2 tBodyAccmeanY  
