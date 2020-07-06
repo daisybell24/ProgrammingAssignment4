@@ -70,9 +70,8 @@ for (subj in unique(meanstdData$subject)){
 averagesDF <- data.frame(averagesData)        
 colnames(averagesDF) <- colnames(meanstdData)
 
-# Write both datasets to csv files
-write.csv(meanstdData, "UCI HAR Dataset/meanstdData.csv")
-write.csv(averagesDF, "UCI HAR Dataset/averagesActSubj.csv")
+# Write dataset to text file
+write.table(averagesDF, "averagesActSubj.txt", row.names = FALSE)
 
         
         
